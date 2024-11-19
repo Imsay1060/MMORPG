@@ -77,7 +77,15 @@ public class PlayerController : MonoBehaviour
         if (direction.x != 0 || direction.z != 0)
         {
             anim.SetBool("RunRight", moveHorizontal > 0);
+            if (!characterSounds.isPlaying && isGrounded)
+            {
+                characterSounds.Play();
+            }
             anim.SetBool("RunLeft", moveHorizontal < 0);
+            if (!characterSounds.isPlaying && isGrounded)
+            {
+                characterSounds.Play();
+            }
             anim.SetBool("Run", true);
             if (!characterSounds.isPlaying && isGrounded)
             {
@@ -88,10 +96,11 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Run", false);
             characterSounds.Stop();
+            anim.SetBool("RunRight", false);
+            characterSounds.Stop();
+            anim.SetBool("RunLeft", false);
+            characterSounds.Stop();
         }
-
-        anim.SetBool("RunRight", moveHorizontal > 0);
-        anim.SetBool("RunLeft", moveHorizontal < 0);
 
         // Skok
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
