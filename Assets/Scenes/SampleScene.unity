@@ -409,7 +409,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 74
   DopplerLevel: 1
   MinDistance: 0.37609863
   MaxDistance: 0.37957764
@@ -715,6 +715,14 @@ PrefabInstance:
       propertyPath: characterSounds
       value: 
       objectReference: {fileID: 1729611830}
+    - target: {fileID: 4956790156717753732, guid: 6833ddcf1a3157247949fe838521b579, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956790156717753732, guid: 6833ddcf1a3157247949fe838521b579, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.72
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
